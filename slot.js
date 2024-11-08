@@ -29,7 +29,7 @@ var coffeeMachine = (function() {
     if (begin !== undefined) {
       return;
     }
-    spinSound1.pause();   
+   
     spinSound1.currentTime = 0; // reset sound to start if it's played previously
     spinSound1.play();
 
