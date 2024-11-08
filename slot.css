@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+// Typography
+$body-font: Arial,
+Helvetica,
+Sans-serif;
+$fancy-font: Open Sans,
+Arial,
+San-serif;
+// Button Color
+$spin-cta: green;
+body {
+  font-size: 13px;
+  font-family: $body-font;
+}
+
+body {
+  margin-top: 200px;
+}
+
+h1 {
+  font-family: $fancy-font;
+  color:  #FFD700;
+  background: black;
+}
+
+.coffee-machine {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#spin-cta {
+  background: black;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  font-family: $fancy-font;
+  font-weight: bold;
+  font-size: 32px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000;
+  cursor: pointer;
+  &:active {
+    background: lighten($spin-cta, 20%);
+    position: relative;
+    top: 3px;
+    left: 3px;
+  }
+}
+
+.txt {
+  color:  #FFD700;
+  background: black;
+  font-family: $fancy-font;
+  font-size: 1.5em;
+  .winner {
+    background: limegreen;
+    border: 3px dotted #000;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px 40px;
+  }
+  .loser {
+    background: #ff0000;
+    border: 3px dotted #000;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 40px;
+  }
+}
+
+.slots {
+  background: rgb(181, 189, 200);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(181, 189, 200, 1) 0%, rgba(130, 140, 149, 1) 36%, rgba(40, 52, 59, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(181, 189, 200, 1) 0%, rgba(130, 140, 149, 1) 36%, rgba(40, 52, 59, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(181, 189, 200, 1) 0%, rgba(130, 140, 149, 1) 36%, rgba(40, 52, 59, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  font-size: 100px;
+  font-family: $body-font;
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  .slots__reel {
+    position: relative;
+    background: #efefef;
+    border: 3px solid #666;
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    .items {
+      position: relative;
+      top: -116px;
+      padding: 0px;
+    }
+    .items li {
+      font-size: 19px;
+      font-family: impact;
+      height: 50px;
+      margin-top: 50px;
+      list-style: none;
+      position: relative;
+      z-index: 1;
+    }
+    .items li:nth-child(1) {
+      color: #8b4513;
+    }
+    .items li:nth-child(2) {
+      color: limegreen;
+    }
+    .items li:nth-child(3) {
+      color: orange;
+    }
+  }
+}
